@@ -1,0 +1,21 @@
+<!-- Contenu -->
+<div  class="container">
+  <div class="alertMsg">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+  <div id="home">
+    <app-article
+      *ngFor="let element of liste"
+      [idArticle]="element.idArticle"
+      [titreArticle]="element.titreArticle"
+      [prixArticle]="element.prixArticle"
+      [description]="element.description"
+      [urlImg]="element.urlImg"
+      [textAltImg]="element.textAltImg"
+      [dispo]="element.dispo"
+      (info)="onAffiche($event)">
+    </app-article>
+  </div>
+</div>
